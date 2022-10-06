@@ -8,15 +8,15 @@ namespace CrudOprationDB.Model
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string  Id { get; set; }
+        public string? Id { get; set; }
 
-        public String  CreateDate { get; set; }
+        public String? CreateDate { get; set; }
 
-        public  String  UpdateDate { get; set; }
+        public  String? UpdateDate { get; set; }
 
         [Required]
         [BsonElement("Name")]
-        public string firstName { get; set; }
+        public string Name { get; set; }
         [Required]
         public String lastName { get; set; }
         [Required]

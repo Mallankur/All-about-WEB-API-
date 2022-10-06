@@ -11,8 +11,8 @@ namespace CrudOprationDB.DataacsessLayer
         public CrudOprationDl(IConfiguration configuration)
         {
             _configuration = configuration;
-            _Mongoclient = new MongoClient(_configuration["DatabaseSettings : ConnectionString"]);
-            var _MongoDatabase = _Mongoclient.GetDatabase(_configuration["DatabaseSettings :DatabaseName"]);
+            _Mongoclient = new MongoClient(_configuration["DatabaseSettings:ConnectionString"]);
+            var _MongoDatabase = _Mongoclient.GetDatabase(_configuration["DatabaseSettings:DatabaseName"]);
             _MongoCollections = _MongoDatabase.GetCollection<InsertRecordRequest>(_configuration["DatabaseSettings:CollectionName"]);
 
 
@@ -40,5 +40,27 @@ namespace CrudOprationDB.DataacsessLayer
             }
             return response;
         }
+        public async Task<GetAllRecordResponce> GetAllRecor()
+        {
+            GetAllRecordResponce responce = new GetAllRecordResponce();
+            responce.Issucess = true;
+            responce.Message = "Data fetch succesfully";
+            try
+            {
+                responce.data = new List<InsertRecordRequest>();
+                responce.data = await _MongoCollections.Find(x=>true).ToListAsync();
+
+                if (responce.data.Count == 0) responce.Message = "No records found ";
+
+            }
+            catch (Exception ex )
+            {
+                responce.Issucess = false;
+                responce.Message = ex.Message;  
+                
+            }
+            return responce;
+        }
+
     }
 }

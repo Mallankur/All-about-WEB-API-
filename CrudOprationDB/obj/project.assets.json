@@ -874,11 +874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\.net core MVC\\ASP.webApi\\CrudOprationDB\\CrudOprationDB.csproj",
+      "projectUniqueName": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\Training Material\\.net core MVC\\ASP.webApi\\All-about-WEB-API-\\CrudOprationDB\\CrudOprationDB.csproj",
       "projectName": "CrudOprationDB",
-      "projectPath": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\.net core MVC\\ASP.webApi\\CrudOprationDB\\CrudOprationDB.csproj",
+      "projectPath": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\Training Material\\.net core MVC\\ASP.webApi\\All-about-WEB-API-\\CrudOprationDB\\CrudOprationDB.csproj",
       "packagesPath": "C:\\Users\\a.mall\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\.net core MVC\\ASP.webApi\\CrudOprationDB\\obj\\",
+      "outputPath": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\Training Material\\.net core MVC\\ASP.webApi\\All-about-WEB-API-\\CrudOprationDB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\a.mall\\AppData\\Roaming\\NuGet\\NuGet.Config",

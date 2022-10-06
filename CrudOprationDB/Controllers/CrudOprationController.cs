@@ -24,17 +24,36 @@ namespace CrudOprationDB.Controllers
             responce.isSuucceses = true;
             try
             {
-                responce= await _crudoprationdl.InsertRecord(request);
+                responce = await _crudoprationdl.InsertRecord(request);
 
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
 
                 responce.isSuucceses = false;
-                responce.Massege= "Expection occur" + ex.Message;
+                responce.Massege = "Expection occur" + ex.Message;
             }
             return Ok(responce);
-        }   
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAllRecord()
+        {
 
+            GetAllRecordResponce responce = new GetAllRecordResponce();
+            responce.Issucess = true;
+            try
+            {
+                responce = await _crudoprationdl.GetAllRecor();
+
+            }
+            catch (Exception ex)
+            {
+
+                responce.Issucess = false;
+                responce.Message = "Expection occur" + ex.Message;
+            }
+            return Ok(responce);
+
+        }
     }
 }
